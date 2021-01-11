@@ -21,4 +21,11 @@ export class AppComponent {
       this.dataSource = new MatTableDataSource(result);
     });
   }
+
+  public getImageUrl(element: any) {
+    if(element && element.image && element.image[0] && element.image[0].url) {
+      return "https://alpha-bank-demo.herokuapp.com" + element.image[0].url;
+    }
+    return "assets/logo.png";
+  }
 }
