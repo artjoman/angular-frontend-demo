@@ -10,7 +10,11 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
-  public getEmployees() {
-     return this.http.get(this.configUrl);
+  public getEmployees(): any {
+    return this.http.get(this.configUrl);
+  }
+
+  public createEmployee(employeeData) {
+    return this.http.post(this.configUrl, employeeData);
   }
 }
