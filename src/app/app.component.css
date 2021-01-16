@@ -36,3 +36,7 @@ table {
     width: 400px;
     margin: 0 auto;
 }
+
+.bottom-margin {
+    margin-bottom: 36px;
+}
