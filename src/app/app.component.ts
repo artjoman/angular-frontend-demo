@@ -33,7 +33,8 @@ export class AppComponent {
 
   public getImageUrl(element: any) {
     if (element && element.image && element.image[0] && element.image[0].url) {
-      return "https://alpha-bank-demo.herokuapp.com" + element.image[0].url;
+      // return "https://alpha-bank-demo.herokuapp.com" + element.image[0].url;
+      return element.image[0].url;
     }
     return "assets/default-picture.png";
   }
@@ -71,7 +72,7 @@ export class AppComponent {
               error.error.data.errors[key].forEach((elementVal) => {
                 concatError += elementVal + " ";
               });
-              
+
             })
           }
           this.error = concatError;
